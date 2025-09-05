@@ -40,7 +40,25 @@ public class App {
                         }
                         break; // ERRO: Faltava o 'break' aqui
 
-                    default:
+                        case 3:
+                        System.out.println("RA");
+                        ra = Integer.parseInt(sc.nextLine());
+                        System.out.println(turma.remover(ra)? " Removido": "Não Localizado");
+                        break;
+
+                        case 4:
+                        for(Aluno al: turma.listar()){
+                            System.out.println(al.getRa()+ "l"+al.getNome());
+                        }
+                        System.out.println("Vagas Livres "+turma.capacidadeTurma());
+                        break;
+
+                        case 0:
+                        System.out.println("Encerrado!");
+                        default:
+                        System.out.println("Opçao Invalida ");
+
+                    
                         // O 'default' estava dentro do case 2, foi movido para fora
                         break;
                 }
